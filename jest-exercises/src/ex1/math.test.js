@@ -60,7 +60,7 @@ describe('divide', () => {
 });
 
 
-// Wykonanie testów dla wiecu scenariusz
+// Wykonanie testów dla wielu scenariusz
 describe('factorial - many scenarios', () => {
     // OPCJA 1
     const testCases = [
