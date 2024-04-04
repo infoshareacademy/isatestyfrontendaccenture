@@ -13,6 +13,6 @@ describe('generateId', () => {
     });
 
     test('should generate id with given empty seed', () => {
-
+        expect(generateId('')).toBe('id_-50');
     });
 });
