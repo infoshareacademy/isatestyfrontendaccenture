@@ -1,4 +1,4 @@
-import { factorial, add } from './math';
+import { factorial, add, divide } from './math';
 
 //  Uzupełnij pozostałe testy
 
@@ -14,6 +14,9 @@ describe('add', () => {
     });
 
     test('should return negative value if both numbers are negative', () => {
+        const actual = add(-5, -2);
+
+        expect(actual).toBe(-7)
     });
 });
 
@@ -24,21 +27,35 @@ describe('factorial', () => {
     });
 
     test('should return 6 when arguemnt is 3', () => {
+        const actual = factorial(3);
+
+        expect(actual).toBe(6);
     });
 
     test('should return 1 when arguemnt is 1', () => {
+        const actual = factorial(1);
+
+        expect(actual).toBe(1);
     });
 
     test('should return 1 when arguemnt is 0', () => {
+        const actual = factorial(0);
+
+        expect(actual).toBe(1);
     });
 });
 
 describe('divide', () => {
+    beforeEach(() => {
+        expect.hasAssertions();
+    });
+
     test('should return error when second value is 0', () => {
+        expect(() => divide(2, 0)).toThrow();
     });
 
     test('should return correct value when both numbers are positive', () => {
-
+        expect(divide(2, 1)).toBe(2)
     });
 });
 
