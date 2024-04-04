@@ -7,6 +7,6 @@ export const createDivElement = (title) => {
 export const createStyledParagraphElement = (text) => {
     const p = document.createElement('p');
     p.innerHTML = text;
-    p.style = 'background-color: red; color: white;'
+    p.style = 'background-color: red; color: black;'
     return p;
 }

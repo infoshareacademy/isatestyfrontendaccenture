@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createDivElement should create div element with title 1`] = `
+<div>
+  title
+</div>
+`;
+
+exports[`createStyledParagraphElement should create p element with title and proper styles 1`] = `
+<p
+  style="background-color: red; color: black;"
+>
+  title
+</p>
+`;
