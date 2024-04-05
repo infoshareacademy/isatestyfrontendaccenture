@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper should create div with correct styles 1`] = `
+<div
+  style="display: flex; flex-direction: column; align-items: center;"
+/>
+`;
