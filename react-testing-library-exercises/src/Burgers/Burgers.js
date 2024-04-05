@@ -16,10 +16,12 @@ export const Burgers = () => {
     }
 
     return <table>
-        {burgers.map((burger) => {
-            return <tr key={burger.id}>
-                {burger.name}
-            </tr>
-        })}
+        <tbody>
+            {burgers.map((burger) => {
+                return <tr key={burger.id}>
+                    <td>{burger.name}</td>
+                </tr>
+            })}
+        </tbody>
     </table>
 }
