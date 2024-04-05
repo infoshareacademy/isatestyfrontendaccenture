@@ -1,11 +1,9 @@
 /// <reference types="Cypress" />
 
 // przykladowy test
-describe('My First Test', () => {
+describe.skip('My First Test', () => {
     it('clicking "type" shows the right headings', () => {
         cy.visit('https://example.cypress.io');
-
-        cy.pause();
 
         cy.contains('type').click();
 
@@ -22,20 +20,33 @@ describe('My First Test', () => {
 // Postaw aplikacje w trybie deweloperskim i napisz testy.
 
 describe('Classic todo e2e tests', () => {
-    it('should add new todo item', () => {
+    beforeEach(() => {
         cy.visit('http://localhost:3000/');
+    })
 
+    it('should add new todo item', () => {
         cy.get('input').type('new task{enter}');
 
-        cy.contains('new task').should('exist')
+        cy.contains('new task').should('exist');
     });
 
     it('if there is no todo item then it should show nothing to do', () => {
-
+        cy.contains('Nothing todo!').should('exist')
     });
 
     it('should remove todo item', () => {
+        cy.get('input').type('new task{enter}');
 
+        // OPCJA 1
+        // cy.contains('🗑').click();
+
+        // OPCJA 2
+        cy.get('ul li').first().find('button').click();
+
+        // OPCJA 3
+        // cy.get('ul li:first-child button').click();
+
+        cy.contains('new task').should('not.exist');
     });
 
     it('should open done task panel when click show done', () => {
